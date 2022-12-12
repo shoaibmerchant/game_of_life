@@ -8,10 +8,10 @@ inherit cargo
 # how to get game_of_life could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/game_of_life/0.1.0"
 SRC_URI += "git://git@github.com/shoaibmerchant/game_of_life.git;protocol=ssh;nobranch=1;branch=main"
-SRCREV = "3b1df3d373278c4aa3f578c766b4982ca7d62753"
+SRCREV = "0f481577e44cd075d0616c35c11f21538103836c"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
-PV:append = ".AUTOINC+3b1df3d373"
+PV:append = ".AUTOINC+0f481577e4"
 
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
