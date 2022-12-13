@@ -1604,7 +1604,7 @@ dependencies = [
 [[package]]
 name = "notan"
 version = "0.8.0"
-source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
+source = "git+https://github.com/shoaibmerchant/notan?branch=c/glutin#49b898bcc66ec489d1d7f763f31fa528148367d3"
 dependencies = [
  "notan_app",
  "notan_backend",
@@ -1622,7 +1622,7 @@ dependencies = [
 [[package]]
 name = "notan_app"
 version = "0.8.0"
-source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
+source = "git+https://github.com/shoaibmerchant/notan?branch=c/glutin#49b898bcc66ec489d1d7f763f31fa528148367d3"
 dependencies = [
  "bytemuck",
  "downcast-rs",
@@ -1643,7 +1643,7 @@ dependencies = [
 [[package]]
 name = "notan_backend"
 version = "0.8.0"
-source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
+source = "git+https://github.com/shoaibmerchant/notan?branch=c/glutin#49b898bcc66ec489d1d7f763f31fa528148367d3"
 dependencies = [
  "notan_web",
  "notan_winit",
@@ -1652,12 +1652,12 @@ dependencies = [
 [[package]]
 name = "notan_core"
 version = "0.8.0"
-source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
+source = "git+https://github.com/shoaibmerchant/notan?branch=c/glutin#49b898bcc66ec489d1d7f763f31fa528148367d3"
 
 [[package]]
 name = "notan_draw"
 version = "0.8.0"
-source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
+source = "git+https://github.com/shoaibmerchant/notan?branch=c/glutin#49b898bcc66ec489d1d7f763f31fa528148367d3"
 dependencies = [
  "log",
  "lyon",
@@ -1674,7 +1674,7 @@ dependencies = [
 [[package]]
 name = "notan_glow"
 version = "0.8.0"
-source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
+source = "git+https://github.com/shoaibmerchant/notan?branch=c/glutin#49b898bcc66ec489d1d7f763f31fa528148367d3"
 dependencies = [
  "bytemuck",
  "glow",
@@ -1690,7 +1690,7 @@ dependencies = [
 [[package]]
 name = "notan_glyph"
 version = "0.8.0"
-source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
+source = "git+https://github.com/shoaibmerchant/notan?branch=c/glutin#49b898bcc66ec489d1d7f763f31fa528148367d3"
 dependencies = [
  "bytemuck",
  "glyph_brush",
@@ -1703,7 +1703,7 @@ dependencies = [
 [[package]]
 name = "notan_graphics"
 version = "0.8.0"
-source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
+source = "git+https://github.com/shoaibmerchant/notan?branch=c/glutin#49b898bcc66ec489d1d7f763f31fa528148367d3"
 dependencies = [
  "bytemuck",
  "glsl-layout",
@@ -1717,7 +1717,7 @@ dependencies = [
 [[package]]
 name = "notan_input"
 version = "0.8.0"
-source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
+source = "git+https://github.com/shoaibmerchant/notan?branch=c/glutin#49b898bcc66ec489d1d7f763f31fa528148367d3"
 dependencies = [
  "hashbrown",
  "log",
@@ -1728,7 +1728,7 @@ dependencies = [
 [[package]]
 name = "notan_log"
 version = "0.8.0"
-source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
+source = "git+https://github.com/shoaibmerchant/notan?branch=c/glutin#49b898bcc66ec489d1d7f763f31fa528148367d3"
 dependencies = [
  "console_log",
  "fern",
@@ -1742,7 +1742,7 @@ dependencies = [
 [[package]]
 name = "notan_macro"
 version = "0.8.0"
-source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
+source = "git+https://github.com/shoaibmerchant/notan?branch=c/glutin#49b898bcc66ec489d1d7f763f31fa528148367d3"
 dependencies = [
  "glsl-to-spirv",
  "num",
@@ -1755,7 +1755,7 @@ dependencies = [
 [[package]]
 name = "notan_math"
 version = "0.8.0"
-source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
+source = "git+https://github.com/shoaibmerchant/notan?branch=c/glutin#49b898bcc66ec489d1d7f763f31fa528148367d3"
 dependencies = [
  "glam",
 ]
@@ -1763,7 +1763,7 @@ dependencies = [
 [[package]]
 name = "notan_random"
 version = "0.8.0"
-source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
+source = "git+https://github.com/shoaibmerchant/notan?branch=c/glutin#49b898bcc66ec489d1d7f763f31fa528148367d3"
 dependencies = [
  "getrandom",
  "rand",
@@ -1773,7 +1773,7 @@ dependencies = [
 [[package]]
 name = "notan_text"
 version = "0.8.0"
-source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
+source = "git+https://github.com/shoaibmerchant/notan?branch=c/glutin#49b898bcc66ec489d1d7f763f31fa528148367d3"
 dependencies = [
  "hashbrown",
  "lazy_static",
@@ -1788,7 +1788,7 @@ dependencies = [
 [[package]]
 name = "notan_utils"
 version = "0.8.0"
-source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
+source = "git+https://github.com/shoaibmerchant/notan?branch=c/glutin#49b898bcc66ec489d1d7f763f31fa528148367d3"
 dependencies = [
  "instant",
  "log",
@@ -1797,7 +1797,7 @@ dependencies = [
 [[package]]
 name = "notan_web"
 version = "0.8.0"
-source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
+source = "git+https://github.com/shoaibmerchant/notan?branch=c/glutin#49b898bcc66ec489d1d7f763f31fa528148367d3"
 dependencies = [
  "console_error_panic_hook",
  "futures-util",
@@ -1815,7 +1815,7 @@ dependencies = [
 [[package]]
 name = "notan_winit"
 version = "0.8.0"
-source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
+source = "git+https://github.com/shoaibmerchant/notan?branch=c/glutin#49b898bcc66ec489d1d7f763f31fa528148367d3"
 dependencies = [
  "glutin 0.30.3",
  "glutin-winit",
