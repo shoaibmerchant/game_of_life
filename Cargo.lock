@@ -177,6 +177,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
+name = "cfg_aliases"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fd16c4719339c4530435d38e511904438d07cce7950afa3718a84ac36c10e89e"
+
+[[package]]
 name = "cgl"
 version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -910,10 +916,10 @@ dependencies = [
  "cgl",
  "cocoa",
  "core-foundation",
- "glutin_egl_sys",
+ "glutin_egl_sys 0.1.6",
  "glutin_gles2_sys",
- "glutin_glx_sys",
- "glutin_wgl_sys",
+ "glutin_glx_sys 0.1.8",
+ "glutin_wgl_sys 0.1.5",
  "libloading",
  "log",
  "objc",
@@ -928,6 +934,41 @@ dependencies = [
 ]
 
 [[package]]
+name = "glutin"
+version = "0.30.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "524d807cd49a0c56a53ef9a6738cd15e7c8c4e9d37a3b7fdb3c250c1cd5bf7a3"
+dependencies = [
+ "bitflags",
+ "cfg_aliases",
+ "cgl",
+ "cocoa",
+ "core-foundation",
+ "glutin_egl_sys 0.3.1",
+ "glutin_glx_sys 0.3.0",
+ "glutin_wgl_sys 0.3.0",
+ "libloading",
+ "objc",
+ "once_cell",
+ "raw-window-handle 0.5.0",
+ "wayland-sys 0.30.1",
+ "windows-sys 0.36.1",
+ "x11-dl",
+]
+
+[[package]]
+name = "glutin-winit"
+version = "0.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e44949d3a525ad1deae282fc9e7dbf05ddcce98219079c5aea7d9aa6927920c6"
+dependencies = [
+ "cfg_aliases",
+ "glutin 0.30.3",
+ "raw-window-handle 0.5.0",
+ "winit",
+]
+
+[[package]]
 name = "glutin_egl_sys"
 version = "0.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -935,6 +976,16 @@ checksum = "68900f84b471f31ea1d1355567eb865a2cf446294f06cef8d653ed7bcf5f013d"
 dependencies = [
  "gl_generator",
  "winapi",
+]
+
+[[package]]
+name = "glutin_egl_sys"
+version = "0.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3adbb8fec0e18e340f990c78f79f5f0e142d0d83f46b10909aaa7d251c00afdf"
+dependencies = [
+ "gl_generator",
+ "windows-sys 0.36.1",
 ]
 
 [[package]]
@@ -958,10 +1009,29 @@ dependencies = [
 ]
 
 [[package]]
+name = "glutin_glx_sys"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "947c4850c58211c9627969c2b4e2674764b81ae5b47bab2c9a477d7942f96e0f"
+dependencies = [
+ "gl_generator",
+ "x11-dl",
+]
+
+[[package]]
 name = "glutin_wgl_sys"
 version = "0.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3da5951a1569dbab865c6f2a863efafff193a93caf05538d193e9e3816d21696"
+dependencies = [
+ "gl_generator",
+]
+
+[[package]]
+name = "glutin_wgl_sys"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "20c33975a6c9d49d72c8f032a60079bf8df536954fbf9e4cee90396ace815c57"
 dependencies = [
  "gl_generator",
 ]
@@ -1091,7 +1161,7 @@ version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "39801c9d3d1ed97dc6f40e2936b5e6b8cbf749db1fbc32b55a63f9ead038e120"
 dependencies = [
- "glutin",
+ "glutin 0.29.1",
  "iced_graphics",
  "iced_native",
  "iced_winit",
@@ -1534,8 +1604,7 @@ dependencies = [
 [[package]]
 name = "notan"
 version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "58ce09e2ce511e1415dc62d601c46281c2ea9cb13d23e5370d8a06aba9e7d4be"
+source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
 dependencies = [
  "notan_app",
  "notan_backend",
@@ -1553,8 +1622,7 @@ dependencies = [
 [[package]]
 name = "notan_app"
 version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "19e942423487541a01252527457a72cc7476ca52fd9e174d02bd78e64e43ebae"
+source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
 dependencies = [
  "bytemuck",
  "downcast-rs",
@@ -1575,8 +1643,7 @@ dependencies = [
 [[package]]
 name = "notan_backend"
 version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e44ed3335faa35daa26e5ded583db96faf713a5c2798816bba82a5f2dbdba06c"
+source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
 dependencies = [
  "notan_web",
  "notan_winit",
@@ -1585,14 +1652,12 @@ dependencies = [
 [[package]]
 name = "notan_core"
 version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5f7950eada89cfd84044bf222edf1f37057860861aca7e181a55775a01393c79"
+source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
 
 [[package]]
 name = "notan_draw"
 version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b51527743a6b408f97f005b73ca2f993ca847ddb1653974373704d8324ae0dc6"
+source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
 dependencies = [
  "log",
  "lyon",
@@ -1609,8 +1674,7 @@ dependencies = [
 [[package]]
 name = "notan_glow"
 version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ba67cf062f771bd6cc2589b41295f9270d851e81b9d0b395d9cf2cce56a610d3"
+source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
 dependencies = [
  "bytemuck",
  "glow",
@@ -1626,8 +1690,7 @@ dependencies = [
 [[package]]
 name = "notan_glyph"
 version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b861a6ea6d388202fe79a495327b3e966608bef891330d0fb194195b94b0167a"
+source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
 dependencies = [
  "bytemuck",
  "glyph_brush",
@@ -1640,8 +1703,7 @@ dependencies = [
 [[package]]
 name = "notan_graphics"
 version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bf2bfd7cc81ec2fb29b8539ae3b9fd9516aefd2dd6ee244c58951c93c21c126c"
+source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
 dependencies = [
  "bytemuck",
  "glsl-layout",
@@ -1655,8 +1717,7 @@ dependencies = [
 [[package]]
 name = "notan_input"
 version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2b0d611dcb541d252cdc76d14acc09283ae2387db54ad95718cdcaf5085bd5fa"
+source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
 dependencies = [
  "hashbrown",
  "log",
@@ -1667,8 +1728,7 @@ dependencies = [
 [[package]]
 name = "notan_log"
 version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ad0871a3fd9fed5580fcfe27f55259876ee2dd26db30760639f5bbd95faa782e"
+source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
 dependencies = [
  "console_log",
  "fern",
@@ -1682,8 +1742,7 @@ dependencies = [
 [[package]]
 name = "notan_macro"
 version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "352cbcc8c9d2d0b69e54d9485b5e6efb3a7d51bd93e6abc35ea1102c2d2fd185"
+source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
 dependencies = [
  "glsl-to-spirv",
  "num",
@@ -1696,8 +1755,7 @@ dependencies = [
 [[package]]
 name = "notan_math"
 version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "74828b12d9a440dfea7689acec7bc39520dd7054ea1cc229da16c6ebc55701d1"
+source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
 dependencies = [
  "glam",
 ]
@@ -1705,8 +1763,7 @@ dependencies = [
 [[package]]
 name = "notan_random"
 version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a0632805dbd9e062c7a071e1513e6c1a05bfec5b1466c063ab80e3f4bff910f5"
+source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
 dependencies = [
  "getrandom",
  "rand",
@@ -1716,8 +1773,7 @@ dependencies = [
 [[package]]
 name = "notan_text"
 version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f084de00054115d90737ad2f29fe66c1193490cf4298be2bd189d76e4d5b9d8b"
+source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
 dependencies = [
  "hashbrown",
  "lazy_static",
@@ -1732,8 +1788,7 @@ dependencies = [
 [[package]]
 name = "notan_utils"
 version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cd7f3451c32c4f2b8a95c7434f4cad13a474e355b06697398a41a6186417227b"
+source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
 dependencies = [
  "instant",
  "log",
@@ -1742,8 +1797,7 @@ dependencies = [
 [[package]]
 name = "notan_web"
 version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8216c69d28003406644409149f73d2b6fa5cb674f0a2d6a6cab5329ef6dd481e"
+source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
 dependencies = [
  "console_error_panic_hook",
  "futures-util",
@@ -1761,14 +1815,16 @@ dependencies = [
 [[package]]
 name = "notan_winit"
 version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f4d1de9a802471bbd69b429620afc43e7a809067cfc89cc825d8b0307a64013d"
+source = "git+https://github.com/Nazariglez/notan?branch=c/glutin#aafe0a6751db1e6143a9e46821eb5bbbea25de16"
 dependencies = [
- "glutin",
+ "glutin 0.30.3",
+ "glutin-winit",
  "log",
  "notan_app",
  "notan_core",
  "notan_glow",
+ "raw-window-handle 0.5.0",
+ "winit",
 ]
 
 [[package]]
@@ -2754,7 +2810,7 @@ dependencies = [
  "scoped-tls",
  "wayland-commons",
  "wayland-scanner",
- "wayland-sys",
+ "wayland-sys 0.29.5",
 ]
 
 [[package]]
@@ -2766,7 +2822,7 @@ dependencies = [
  "nix 0.24.3",
  "once_cell",
  "smallvec",
- "wayland-sys",
+ "wayland-sys 0.29.5",
 ]
 
 [[package]]
@@ -2787,7 +2843,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "402de949f81a012926d821a2d659f930694257e76dd92b6e0042ceb27be4107d"
 dependencies = [
  "wayland-client",
- "wayland-sys",
+ "wayland-sys 0.29.5",
 ]
 
 [[package]]
@@ -2821,6 +2877,18 @@ checksum = "be12ce1a3c39ec7dba25594b97b42cb3195d54953ddb9d3d95a7c3902bc6e9d4"
 dependencies = [
  "dlib",
  "lazy_static",
+ "pkg-config",
+]
+
+[[package]]
+name = "wayland-sys"
+version = "0.30.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "96b2a02ac608e07132978689a6f9bf4214949c85998c247abadd4f4129b1aa06"
+dependencies = [
+ "dlib",
+ "lazy_static",
+ "log",
  "pkg-config",
 ]
 

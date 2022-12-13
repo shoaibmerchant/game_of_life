@@ -8,10 +8,10 @@ inherit cargo
 # how to get game_of_life could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/game_of_life/0.1.0"
 SRC_URI += "git://git@github.com/shoaibmerchant/game_of_life.git;protocol=ssh;nobranch=1;branch=main"
-SRCREV = "0f481577e44cd075d0616c35c11f21538103836c"
+SRCREV = "e00a9d6b6bf301340cac40de111c73f2acbe6a07"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
-PV:append = ".AUTOINC+0f481577e4"
+PV:append = ".AUTOINC+e00a9d6b6b"
 
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
@@ -21,19 +21,17 @@ SRC_URI += " \
     crate://crates.io/adler/1.0.2 \
     crate://crates.io/ahash/0.7.6 \
     crate://crates.io/aho-corasick/0.7.20 \
-    crate://crates.io/android_system_properties/0.1.5 \
     crate://crates.io/approx/0.5.1 \
     crate://crates.io/arrayref/0.3.6 \
     crate://crates.io/arrayvec/0.5.2 \
     crate://crates.io/arrayvec/0.7.2 \
-    crate://crates.io/ash/0.37.1+1.3.235 \
     crate://crates.io/atty/0.2.14 \
     crate://crates.io/autocfg/1.1.0 \
-    crate://crates.io/bit-set/0.5.3 \
-    crate://crates.io/bit-vec/0.6.3 \
     crate://crates.io/bitflags/1.3.2 \
+    crate://crates.io/block-buffer/0.3.3 \
     crate://crates.io/block/0.1.6 \
     crate://crates.io/bumpalo/3.11.1 \
+    crate://crates.io/byte-tools/0.2.0 \
     crate://crates.io/bytemuck/1.12.3 \
     crate://crates.io/bytemuck_derive/1.3.0 \
     crate://crates.io/byteorder/1.4.3 \
@@ -49,8 +47,10 @@ SRC_URI += " \
     crate://crates.io/cmake/0.1.49 \
     crate://crates.io/cocoa-foundation/0.1.0 \
     crate://crates.io/cocoa/0.24.1 \
-    crate://crates.io/codespan-reporting/0.11.1 \
-    crate://crates.io/const_panic/0.2.7 \
+    crate://crates.io/color_quant/1.1.0 \
+    crate://crates.io/colored/1.9.3 \
+    crate://crates.io/console_error_panic_hook/0.1.7 \
+    crate://crates.io/console_log/0.2.0 \
     crate://crates.io/core-foundation-sys/0.8.3 \
     crate://crates.io/core-foundation/0.9.3 \
     crate://crates.io/core-graphics-types/0.1.1 \
@@ -63,22 +63,22 @@ SRC_URI += " \
     crate://crates.io/crossbeam-utils/0.8.14 \
     crate://crates.io/crossfont/0.5.1 \
     crate://crates.io/cty/0.2.2 \
-    crate://crates.io/d3d12/0.5.0 \
     crate://crates.io/darling/0.13.4 \
     crate://crates.io/darling_core/0.13.4 \
     crate://crates.io/darling_macro/0.13.4 \
+    crate://crates.io/digest/0.7.6 \
     crate://crates.io/dispatch/0.2.0 \
     crate://crates.io/dlib/0.5.0 \
     crate://crates.io/downcast-rs/1.2.0 \
     crate://crates.io/dwrote/0.11.0 \
     crate://crates.io/either/1.8.0 \
-    crate://crates.io/encase/0.3.0 \
-    crate://crates.io/encase_derive/0.3.0 \
-    crate://crates.io/encase_derive_impl/0.3.0 \
     crate://crates.io/env_logger/0.9.3 \
     crate://crates.io/error-code/2.3.1 \
     crate://crates.io/euclid/0.22.7 \
     crate://crates.io/expat-sys/2.1.6 \
+    crate://crates.io/fake-simd/0.1.2 \
+    crate://crates.io/fastrand/1.8.0 \
+    crate://crates.io/fern/0.6.1 \
     crate://crates.io/find-crate/0.6.3 \
     crate://crates.io/flate2/1.0.25 \
     crate://crates.io/float_next_after/0.1.5 \
@@ -99,47 +99,51 @@ SRC_URI += " \
     crate://crates.io/futures-task/0.3.25 \
     crate://crates.io/futures-util/0.3.25 \
     crate://crates.io/futures/0.3.25 \
-    crate://crates.io/fxhash/0.2.1 \
+    crate://crates.io/generic-array/0.9.1 \
     crate://crates.io/gethostname/0.2.3 \
     crate://crates.io/getrandom/0.2.8 \
     crate://crates.io/gl_generator/0.14.0 \
     crate://crates.io/glam/0.21.3 \
     crate://crates.io/glow/0.11.2 \
     crate://crates.io/glow_glyph/0.5.1 \
+    crate://crates.io/glsl-layout-derive/0.4.0 \
+    crate://crates.io/glsl-layout/0.4.2 \
+    crate://crates.io/glsl-to-spirv/0.1.7 \
+    crate://crates.io/glutin-winit/0.2.1 \
     crate://crates.io/glutin/0.29.1 \
+    crate://crates.io/glutin/0.30.3 \
     crate://crates.io/glutin_egl_sys/0.1.6 \
+    crate://crates.io/glutin_egl_sys/0.3.1 \
     crate://crates.io/glutin_gles2_sys/0.1.5 \
     crate://crates.io/glutin_glx_sys/0.1.8 \
+    crate://crates.io/glutin_glx_sys/0.3.0 \
     crate://crates.io/glutin_wgl_sys/0.1.5 \
+    crate://crates.io/glutin_wgl_sys/0.3.0 \
     crate://crates.io/glyph_brush/0.7.5 \
     crate://crates.io/glyph_brush_draw_cache/0.1.5 \
     crate://crates.io/glyph_brush_layout/0.2.3 \
-    crate://crates.io/gpu-alloc-types/0.2.0 \
-    crate://crates.io/gpu-alloc/0.5.3 \
-    crate://crates.io/gpu-descriptor-types/0.1.1 \
-    crate://crates.io/gpu-descriptor/0.2.3 \
-    crate://crates.io/guillotiere/0.6.2 \
     crate://crates.io/hashbrown/0.12.3 \
     crate://crates.io/hermit-abi/0.1.19 \
-    crate://crates.io/hexf-parse/0.2.1 \
     crate://crates.io/humantime/2.1.0 \
-    crate://crates.io/iced/0.5.2 \
+    crate://crates.io/iced/0.6.0 \
     crate://crates.io/iced_core/0.6.2 \
     crate://crates.io/iced_futures/0.5.1 \
-    crate://crates.io/iced_glow/0.4.1 \
-    crate://crates.io/iced_glutin/0.4.0 \
-    crate://crates.io/iced_graphics/0.4.0 \
-    crate://crates.io/iced_native/0.6.1 \
+    crate://crates.io/iced_glow/0.5.0 \
+    crate://crates.io/iced_glutin/0.5.0 \
+    crate://crates.io/iced_graphics/0.5.0 \
+    crate://crates.io/iced_native/0.7.0 \
     crate://crates.io/iced_style/0.5.1 \
-    crate://crates.io/iced_wgpu/0.6.1 \
-    crate://crates.io/iced_winit/0.5.1 \
+    crate://crates.io/iced_winit/0.6.0 \
     crate://crates.io/ident_case/1.0.1 \
+    crate://crates.io/image/0.24.5 \
     crate://crates.io/indexmap/1.9.2 \
     crate://crates.io/instant/0.1.12 \
     crate://crates.io/itertools/0.9.0 \
+    crate://crates.io/itoa/1.0.4 \
     crate://crates.io/jni-sys/0.3.0 \
+    crate://crates.io/jobserver/0.1.25 \
+    crate://crates.io/jpeg-decoder/0.3.0 \
     crate://crates.io/js-sys/0.3.60 \
-    crate://crates.io/khronos-egl/4.1.0 \
     crate://crates.io/khronos_api/3.1.0 \
     crate://crates.io/lazy_static/1.4.0 \
     crate://crates.io/libc/0.2.138 \
@@ -158,11 +162,9 @@ SRC_URI += " \
     crate://crates.io/memmap2/0.5.8 \
     crate://crates.io/memoffset/0.6.5 \
     crate://crates.io/memoffset/0.7.1 \
-    crate://crates.io/metal/0.24.0 \
     crate://crates.io/minimal-lexical/0.2.1 \
     crate://crates.io/miniz_oxide/0.6.2 \
     crate://crates.io/mio/0.8.5 \
-    crate://crates.io/naga/0.10.0 \
     crate://crates.io/ndk-context/0.1.1 \
     crate://crates.io/ndk-glue/0.7.0 \
     crate://crates.io/ndk-macro/0.3.0 \
@@ -172,13 +174,19 @@ SRC_URI += " \
     crate://crates.io/nix/0.24.3 \
     crate://crates.io/nix/0.25.1 \
     crate://crates.io/nom/7.1.1 \
+    crate://crates.io/num-bigint/0.4.3 \
+    crate://crates.io/num-complex/0.4.2 \
+    crate://crates.io/num-integer/0.1.45 \
+    crate://crates.io/num-iter/0.1.43 \
+    crate://crates.io/num-rational/0.4.1 \
     crate://crates.io/num-traits/0.2.15 \
+    crate://crates.io/num/0.4.0 \
     crate://crates.io/num_cpus/1.14.0 \
     crate://crates.io/num_enum/0.5.7 \
     crate://crates.io/num_enum_derive/0.5.7 \
+    crate://crates.io/num_threads/0.1.6 \
     crate://crates.io/objc-foundation/0.1.1 \
     crate://crates.io/objc/0.2.7 \
-    crate://crates.io/objc_exception/0.1.2 \
     crate://crates.io/objc_id/0.1.1 \
     crate://crates.io/once_cell/1.16.0 \
     crate://crates.io/ordered-float/3.4.0 \
@@ -188,7 +196,7 @@ SRC_URI += " \
     crate://crates.io/palette_derive/0.6.1 \
     crate://crates.io/parking_lot/0.11.2 \
     crate://crates.io/parking_lot/0.12.1 \
-    crate://crates.io/parking_lot_core/0.8.5 \
+    crate://crates.io/parking_lot_core/0.8.6 \
     crate://crates.io/parking_lot_core/0.9.5 \
     crate://crates.io/percent-encoding/2.2.0 \
     crate://crates.io/phf/0.11.1 \
@@ -198,16 +206,16 @@ SRC_URI += " \
     crate://crates.io/pin-project-lite/0.2.9 \
     crate://crates.io/pin-utils/0.1.0 \
     crate://crates.io/pkg-config/0.3.26 \
+    crate://crates.io/platter2/0.1.6 \
     crate://crates.io/png/0.17.7 \
     crate://crates.io/ppv-lite86/0.2.17 \
     crate://crates.io/proc-macro-crate/1.2.1 \
     crate://crates.io/proc-macro2/1.0.47 \
-    crate://crates.io/profiling/1.0.7 \
     crate://crates.io/quote/1.0.21 \
     crate://crates.io/rand/0.8.5 \
     crate://crates.io/rand_chacha/0.3.1 \
     crate://crates.io/rand_core/0.6.4 \
-    crate://crates.io/range-alloc/0.1.2 \
+    crate://crates.io/rand_pcg/0.3.1 \
     crate://crates.io/raw-window-handle/0.3.4 \
     crate://crates.io/raw-window-handle/0.4.3 \
     crate://crates.io/raw-window-handle/0.5.0 \
@@ -216,16 +224,19 @@ SRC_URI += " \
     crate://crates.io/redox_syscall/0.2.16 \
     crate://crates.io/regex-syntax/0.6.28 \
     crate://crates.io/regex/1.7.0 \
-    crate://crates.io/renderdoc-sys/0.7.1 \
+    crate://crates.io/remove_dir_all/0.5.3 \
     crate://crates.io/rustc-hash/1.1.0 \
+    crate://crates.io/ryu/1.0.11 \
     crate://crates.io/safe_arch/0.5.2 \
     crate://crates.io/scoped-tls/1.0.1 \
     crate://crates.io/scopeguard/1.1.0 \
     crate://crates.io/sctk-adwaita/0.4.3 \
     crate://crates.io/serde/1.0.150 \
     crate://crates.io/serde_derive/1.0.150 \
+    crate://crates.io/serde_json/1.0.89 \
     crate://crates.io/servo-fontconfig-sys/5.1.0 \
     crate://crates.io/servo-fontconfig/0.5.1 \
+    crate://crates.io/sha2/0.7.1 \
     crate://crates.io/shared_library/0.1.9 \
     crate://crates.io/siphasher/0.3.10 \
     crate://crates.io/slab/0.4.7 \
@@ -233,25 +244,27 @@ SRC_URI += " \
     crate://crates.io/smallvec/1.10.0 \
     crate://crates.io/smithay-client-toolkit/0.16.0 \
     crate://crates.io/smithay-clipboard/0.6.6 \
-    crate://crates.io/spirv/0.2.0+1.5.4 \
+    crate://crates.io/spirv_cross/0.23.1 \
     crate://crates.io/static_assertions/1.1.0 \
     crate://crates.io/str-buf/1.0.6 \
     crate://crates.io/strsim/0.10.0 \
-    crate://crates.io/svg_fmt/0.4.1 \
     crate://crates.io/syn/1.0.105 \
+    crate://crates.io/tempfile/3.3.0 \
     crate://crates.io/termcolor/1.1.3 \
     crate://crates.io/thiserror-impl/1.0.37 \
     crate://crates.io/thiserror/1.0.37 \
+    crate://crates.io/time-core/0.1.0 \
+    crate://crates.io/time-macros/0.2.6 \
+    crate://crates.io/time/0.3.17 \
     crate://crates.io/tiny-skia-path/0.7.0 \
     crate://crates.io/tiny-skia/0.7.0 \
     crate://crates.io/tokio/1.23.0 \
     crate://crates.io/toml/0.5.9 \
     crate://crates.io/ttf-parser/0.17.1 \
     crate://crates.io/twox-hash/1.6.3 \
+    crate://crates.io/typenum/1.16.0 \
     crate://crates.io/unicode-ident/1.0.5 \
     crate://crates.io/unicode-segmentation/1.10.0 \
-    crate://crates.io/unicode-width/0.1.10 \
-    crate://crates.io/unicode-xid/0.2.4 \
     crate://crates.io/vec_map/0.8.2 \
     crate://crates.io/version_check/0.9.4 \
     crate://crates.io/wasi/0.11.0+wasi-snapshot-preview1 \
@@ -269,12 +282,8 @@ SRC_URI += " \
     crate://crates.io/wayland-protocols/0.29.5 \
     crate://crates.io/wayland-scanner/0.29.5 \
     crate://crates.io/wayland-sys/0.29.5 \
+    crate://crates.io/wayland-sys/0.30.1 \
     crate://crates.io/web-sys/0.3.60 \
-    crate://crates.io/wgpu-core/0.14.2 \
-    crate://crates.io/wgpu-hal/0.14.1 \
-    crate://crates.io/wgpu-types/0.14.1 \
-    crate://crates.io/wgpu/0.14.2 \
-    crate://crates.io/wgpu_glyph/0.18.0 \
     crate://crates.io/winapi-i686-pc-windows-gnu/0.4.0 \
     crate://crates.io/winapi-util/0.1.5 \
     crate://crates.io/winapi-wsapoll/0.1.1 \
@@ -302,9 +311,76 @@ SRC_URI += " \
     crate://crates.io/xcursor/0.3.4 \
     crate://crates.io/xi-unicode/0.3.0 \
     crate://crates.io/xml-rs/0.8.4 \
+    git://github.com/Nazariglez/notan;protocol=https;nobranch=1;name=notan;destsuffix=notan \
+    git://github.com/Nazariglez/notan;protocol=https;nobranch=1;name=notan_app;destsuffix=notan_app \
+    git://github.com/Nazariglez/notan;protocol=https;nobranch=1;name=notan_backend;destsuffix=notan_backend \
+    git://github.com/Nazariglez/notan;protocol=https;nobranch=1;name=notan_core;destsuffix=notan_core \
+    git://github.com/Nazariglez/notan;protocol=https;nobranch=1;name=notan_draw;destsuffix=notan_draw \
+    git://github.com/Nazariglez/notan;protocol=https;nobranch=1;name=notan_glow;destsuffix=notan_glow \
+    git://github.com/Nazariglez/notan;protocol=https;nobranch=1;name=notan_glyph;destsuffix=notan_glyph \
+    git://github.com/Nazariglez/notan;protocol=https;nobranch=1;name=notan_graphics;destsuffix=notan_graphics \
+    git://github.com/Nazariglez/notan;protocol=https;nobranch=1;name=notan_input;destsuffix=notan_input \
+    git://github.com/Nazariglez/notan;protocol=https;nobranch=1;name=notan_log;destsuffix=notan_log \
+    git://github.com/Nazariglez/notan;protocol=https;nobranch=1;name=notan_macro;destsuffix=notan_macro \
+    git://github.com/Nazariglez/notan;protocol=https;nobranch=1;name=notan_math;destsuffix=notan_math \
+    git://github.com/Nazariglez/notan;protocol=https;nobranch=1;name=notan_random;destsuffix=notan_random \
+    git://github.com/Nazariglez/notan;protocol=https;nobranch=1;name=notan_text;destsuffix=notan_text \
+    git://github.com/Nazariglez/notan;protocol=https;nobranch=1;name=notan_utils;destsuffix=notan_utils \
+    git://github.com/Nazariglez/notan;protocol=https;nobranch=1;name=notan_web;destsuffix=notan_web \
+    git://github.com/Nazariglez/notan;protocol=https;nobranch=1;name=notan_winit;destsuffix=notan_winit \
 "
 
-
+SRCREV_FORMAT .= "_notan"
+SRCREV_notan = "c/glutin"
+EXTRA_OECARGO_PATHS += "${WORKDIR}/notan"
+SRCREV_FORMAT .= "_notan_app"
+SRCREV_notan_app = "c/glutin"
+EXTRA_OECARGO_PATHS += "${WORKDIR}/notan_app"
+SRCREV_FORMAT .= "_notan_backend"
+SRCREV_notan_backend = "c/glutin"
+EXTRA_OECARGO_PATHS += "${WORKDIR}/notan_backend"
+SRCREV_FORMAT .= "_notan_core"
+SRCREV_notan_core = "c/glutin"
+EXTRA_OECARGO_PATHS += "${WORKDIR}/notan_core"
+SRCREV_FORMAT .= "_notan_draw"
+SRCREV_notan_draw = "c/glutin"
+EXTRA_OECARGO_PATHS += "${WORKDIR}/notan_draw"
+SRCREV_FORMAT .= "_notan_glow"
+SRCREV_notan_glow = "c/glutin"
+EXTRA_OECARGO_PATHS += "${WORKDIR}/notan_glow"
+SRCREV_FORMAT .= "_notan_glyph"
+SRCREV_notan_glyph = "c/glutin"
+EXTRA_OECARGO_PATHS += "${WORKDIR}/notan_glyph"
+SRCREV_FORMAT .= "_notan_graphics"
+SRCREV_notan_graphics = "c/glutin"
+EXTRA_OECARGO_PATHS += "${WORKDIR}/notan_graphics"
+SRCREV_FORMAT .= "_notan_input"
+SRCREV_notan_input = "c/glutin"
+EXTRA_OECARGO_PATHS += "${WORKDIR}/notan_input"
+SRCREV_FORMAT .= "_notan_log"
+SRCREV_notan_log = "c/glutin"
+EXTRA_OECARGO_PATHS += "${WORKDIR}/notan_log"
+SRCREV_FORMAT .= "_notan_macro"
+SRCREV_notan_macro = "c/glutin"
+EXTRA_OECARGO_PATHS += "${WORKDIR}/notan_macro"
+SRCREV_FORMAT .= "_notan_math"
+SRCREV_notan_math = "c/glutin"
+EXTRA_OECARGO_PATHS += "${WORKDIR}/notan_math"
+SRCREV_FORMAT .= "_notan_random"
+SRCREV_notan_random = "c/glutin"
+EXTRA_OECARGO_PATHS += "${WORKDIR}/notan_random"
+SRCREV_FORMAT .= "_notan_text"
+SRCREV_notan_text = "c/glutin"
+EXTRA_OECARGO_PATHS += "${WORKDIR}/notan_text"
+SRCREV_FORMAT .= "_notan_utils"
+SRCREV_notan_utils = "c/glutin"
+EXTRA_OECARGO_PATHS += "${WORKDIR}/notan_utils"
+SRCREV_FORMAT .= "_notan_web"
+SRCREV_notan_web = "c/glutin"
+EXTRA_OECARGO_PATHS += "${WORKDIR}/notan_web"
+SRCREV_FORMAT .= "_notan_winit"
+SRCREV_notan_winit = "c/glutin"
+EXTRA_OECARGO_PATHS += "${WORKDIR}/notan_winit"
 
 # FIXME: update generateme with the real MD5 of the license file
 LIC_FILES_CHKSUM = " \
